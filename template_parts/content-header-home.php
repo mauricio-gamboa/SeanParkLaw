@@ -11,7 +11,9 @@
           <?php if(ot_get_option('home_page_title')): ?>
           <h1><?php echo ot_get_option('home_page_title'); ?></h1>
           <?php endif; ?>
-          <a href="" class="my-btn btn-3">get help now <span><i class="fa fa-chevron-right"></i></span></a>
+          
+          <a href="#reviews-wrapper" offset="64" du-smooth-scroll class="my-btn btn-3 hide-xs">get help now <span><i class="fa fa-chevron-right"></i></span></a>
+          <a href="#contact-form" offset="70" du-smooth-scroll class="my-btn btn-3 show-xs">get help now <span><i class="fa fa-chevron-right"></i></span></a>
           
           <?php if(ot_get_option('sean_s_image')): ?>
           <img class="lawyer-img" src="<?php echo ot_get_option('sean_s_image'); ?>" alt=""/>

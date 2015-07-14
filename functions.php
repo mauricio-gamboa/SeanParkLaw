@@ -32,7 +32,10 @@ if (!function_exists('sean_park_law_setup')) :
     if ( function_exists('add_theme_support') ) {
       add_theme_support('post-thumbnails');
     }
-  
+
+    register_nav_menu('main-menu',__( 'Main Menu' ));
+    register_nav_menu('footer-menu',__( 'Footer Menu' ));
+    register_nav_menu('bottom-menu',__( 'Bottom Menu' ));
   }
 endif;
 

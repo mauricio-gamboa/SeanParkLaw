@@ -32,6 +32,7 @@ module.exports = function (grunt) {
           'bower_components/OwlCarousel/owl-carousel/owl.carousel.js',
           'bower_components/bootstrap/dist/js/bootstrap.js',
           'bower_components/angular/angular.js',
+          'bower_components/angular-scroll/angular-scroll.js',
           'bower_components/re-tree/re-tree.js',
           'bower_components/ng-device-detector/ng-device-detector.js'
         ],

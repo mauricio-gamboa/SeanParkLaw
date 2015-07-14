@@ -323,13 +323,13 @@ Main Menu Styles
 .white-menu .menu-wrapper .main-menu li a:hover {
   color: #3263cd;
 }
-.white-menu .menu-wrapper .main-menu li.sub-menu:hover a {
+.white-menu .menu-wrapper .main-menu li.menu-item-has-children:hover a {
   color: white;
 }
-.white-menu .menu-wrapper .main-menu li.sub-menu ul li a {
+.white-menu .menu-wrapper .main-menu li.menu-item-has-children ul li a {
   color: rgba(255, 255, 255, 0.8);
 }
-.white-menu .menu-wrapper .main-menu li.sub-menu ul li a:hover {
+.white-menu .menu-wrapper .main-menu li.menu-item-has-children ul li a:hover {
   color: white;
 }
 .white-menu .menu-wrapper .main-menu-mobile {
@@ -383,13 +383,13 @@ Main Menu Styles
 #main-menu.white .menu-wrapper .main-menu li a:hover {
   color: #3263cd;
 }
-#main-menu.white .menu-wrapper .main-menu li.sub-menu:hover a {
+#main-menu.white .menu-wrapper .main-menu li.menu-item-has-children:hover a {
   color: white;
 }
-#main-menu.white .menu-wrapper .main-menu li.sub-menu ul li a {
+#main-menu.white .menu-wrapper .main-menu li.menu-item-has-children ul li a {
   color: rgba(255, 255, 255, 0.8);
 }
-#main-menu.white .menu-wrapper .main-menu li.sub-menu ul li a:hover {
+#main-menu.white .menu-wrapper .main-menu li.menu-item-has-children ul li a:hover {
   color: white;
 }
 #main-menu.white .menu-wrapper .main-menu-mobile {
@@ -437,13 +437,13 @@ Main Menu Styles
   #main-menu .menu-wrapper .main-menu li a:hover {
     color: #3263cd;
   }
-  #main-menu .menu-wrapper .main-menu li.sub-menu:hover a {
+  #main-menu .menu-wrapper .main-menu li.menu-item-has-children:hover a {
     color: white;
   }
-  #main-menu .menu-wrapper .main-menu li.sub-menu ul li a {
+  #main-menu .menu-wrapper .main-menu li.menu-item-has-children ul li a {
     color: rgba(255, 255, 255, 0.8);
   }
-  #main-menu .menu-wrapper .main-menu li.sub-menu ul li a:hover {
+  #main-menu .menu-wrapper .main-menu li.menu-item-has-children ul li a:hover {
     color: white;
   }
   #main-menu .menu-wrapper .main-menu-mobile {
@@ -518,10 +518,15 @@ Main Menu Styles
 .main-menu {
   margin: 0;
 }
-.main-menu li {
+.main-menu > li {
   float: left;
 }
-.main-menu li a {
+@media (min-width: 993px) and (max-width: 1200px) {
+  .main-menu > li:first-child {
+    display: none;
+  }
+}
+.main-menu > li a {
   color: rgba(255, 255, 255, 0.8);
   border-bottom: 3px solid transparent;
   display: block;
@@ -534,27 +539,29 @@ Main Menu Styles
   position: relative;
   z-index: 10;
 }
-.main-menu li a:hover {
+.main-menu > li a:hover {
   color: white;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
-  .main-menu li a {
+  .main-menu > li a {
     padding: 0 20px;
   }
 }
-.main-menu li.active a {
+.main-menu > li.current-menu-item a {
   border-color: #e61919;
 }
-.main-menu li.sub-menu {
+.main-menu > li.menu-item-has-children {
   position: relative;
 }
-.main-menu li.sub-menu:hover > ul {
+.main-menu > li.menu-item-has-children:hover > ul {
   display: block;
 }
-.main-menu li.sub-menu > a {
+.main-menu > li.menu-item-has-children > a {
   background: url('../images/arrow-2.png') no-repeat 92% 50%;
 }
-.main-menu li.sub-menu ul {
+.main-menu > li.menu-item-has-children ul {
+  list-style: none;
+  padding: 50px 0 0 0;
   display: none;
   margin: 0;
   position: absolute;
@@ -562,16 +569,15 @@ Main Menu Styles
   left: 0;
   background-color: #1a388a;
   width: 100%;
-  padding-top: 50px;
 }
-.main-menu li.sub-menu ul li {
+.main-menu > li.menu-item-has-children ul li {
   float: none;
   border-bottom: 1px solid #314c96;
 }
-.main-menu li.sub-menu ul li:last-child {
+.main-menu > li.menu-item-has-children ul li:last-child {
   border-bottom: none;
 }
-.main-menu li.sub-menu ul li a {
+.main-menu > li.menu-item-has-children ul li a {
   text-transform: capitalize;
   padding: 0 25px;
   height: 42px;
@@ -594,7 +600,7 @@ Main Menu Styles
 .main-menu-mobile li:last-child {
   border-bottom: none;
 }
-.main-menu-mobile li.active a {
+.main-menu-mobile li.current-menu-item a {
   color: white;
   background-color: #b71319;
 }
@@ -1340,89 +1346,100 @@ Footer Styles
     float: none;
   }
 }
-.footer-menu {
+#footer .footer-menus > ul {
+  margin: 0;
+}
+#footer .footer-menus > ul > li {
   float: left;
 }
+#footer .footer-menus > ul > li.menu-item-has-children > a {
+  margin-bottom: 10px;
+}
 @media (max-width: 767px) {
-  .footer-menu {
+  #footer .footer-menus > ul > li {
     width: 25% !important;
   }
 }
-.footer-menu:nth-child(1) {
+#footer .footer-menus > ul > li:nth-child(1) {
   width: 100px;
 }
-.footer-menu:nth-child(2) {
+#footer .footer-menus > ul > li:nth-child(2) {
   width: 195px;
 }
-.footer-menu:nth-child(3) {
+#footer .footer-menus > ul > li:nth-child(3) {
   width: 160px;
 }
-.footer-menu:nth-child(4) {
+#footer .footer-menus > ul > li:nth-child(4) {
   width: 100px;
 }
-.footer-menu:nth-child(5) {
+#footer .footer-menus > ul > li:nth-child(5) {
   width: auto;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
-  .footer-menu:nth-child(1) {
+  #footer .footer-menus > ul > li:nth-child(1) {
     width: 65px;
   }
-  .footer-menu:nth-child(2) {
+  #footer .footer-menus > ul > li:nth-child(2) {
     width: 140px;
   }
-  .footer-menu:nth-child(3) {
+  #footer .footer-menus > ul > li:nth-child(3) {
     width: 100px;
   }
-  .footer-menu:nth-child(4) {
+  #footer .footer-menus > ul > li:nth-child(4) {
     width: 65px;
   }
-  .footer-menu:nth-child(5) {
+  #footer .footer-menus > ul > li:nth-child(5) {
     width: auto;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  .footer-menu:nth-child(1),
-  .footer-menu:nth-child(2),
-  .footer-menu:nth-child(3),
-  .footer-menu:nth-child(4),
-  .footer-menu:nth-child(5) {
+  #footer .footer-menus > ul > li:nth-child(1),
+  #footer .footer-menus > ul > li:nth-child(2),
+  #footer .footer-menus > ul > li:nth-child(3),
+  #footer .footer-menus > ul > li:nth-child(4),
+  #footer .footer-menus > ul > li:nth-child(5) {
     width: 20%;
   }
 }
-.footer-menu h5 {
+#footer .footer-menus > ul > li > a {
+  font-family: 'proxima_nova_bold';
   color: #858a9a;
   font-size: 13px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  display: block;
 }
 @media (max-width: 767px) {
-  .footer-menu h5 {
+  #footer .footer-menus > ul > li > a {
     text-align: center;
     margin: 0;
     line-height: normal;
   }
 }
-.footer-menu ul {
+#footer .footer-menus > ul > li > .sub-menu {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
-@media (max-width: 767px) {
-  .footer-menu ul {
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
+  #footer .footer-menus > ul > li > .sub-menu {
     display: none;
   }
 }
-.footer-menu ul li {
+#footer .footer-menus > ul > li > .sub-menu li {
   font-size: 13px;
   line-height: 19px;
-  margin-bottom: 10px;
 }
-.footer-menu ul li:last-child {
+#footer .footer-menus > ul > li > .sub-menu li:last-child {
   margin-bottom: 0;
 }
-.footer-menu ul li a {
+#footer .footer-menus > ul > li > .sub-menu li a {
   color: #4b4f5c;
   text-transform: capitalize;
+  margin-bottom: 10px;
+  display: block;
 }
-.footer-menu ul li a:hover {
+#footer .footer-menus > ul > li > .sub-menu li a:hover {
   color: #606575;
   text-decoration: none;
 }
@@ -1518,21 +1535,48 @@ Footer Styles
   font-size: 12px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
+  display: inline;
 }
-.footer-bottom p > span {
+@media (max-width: 767px) {
+  .footer-bottom p {
+    display: block;
+    text-align: center;
+    line-height: normal;
+  }
+}
+.footer-bottom ul {
+  margin: 0;
+  display: inline;
+}
+@media (max-width: 767px) {
+  .footer-bottom ul {
+    display: block;
+    text-align: center;
+    line-height: normal;
+    margin-top: 10px;
+  }
+}
+.footer-bottom ul li {
+  display: inline;
+}
+.footer-bottom ul li > span {
   display: inline-block;
   margin: 0 20px;
 }
 @media (max-width: 767px) {
-  .footer-bottom p {
-    float: none;
-    width: 100%;
-    text-align: center;
-    line-height: 22px;
-  }
-  .footer-bottom p > span {
+  .footer-bottom ul li > span {
     margin: 0;
     display: inline;
+  }
+}
+@media (max-width: 767px) {
+  .footer-bottom ul li:first-child > span {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .footer-bottom ul li {
+    line-height: normal;
   }
 }
 .footer-bottom .powered {
@@ -1628,9 +1672,11 @@ Click Here Styles
 }
 @media (min-width: 768px) and (max-width: 992px) {
   #click-here h4 {
-    font-size: 23px;
+    font-size: 22px;
     line-height: 22px;
     padding: 5px 0;
+    text-align: center;
+    width: 258px;
   }
 }
 /***************************

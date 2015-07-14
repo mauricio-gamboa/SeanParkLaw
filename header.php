@@ -18,29 +18,10 @@
             <i class="fa fa-bars"></i>
           </div>
           <h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-          <ul class="list-unstyled main-menu clearfix hide-s hide-xs">
-            <li class="hide-m"><a href="">Home</a></li>
-            <li class="active"><a href="">About</a></li>
-            <li class="sub-menu">
-              <a href="">Locations</a>
-              <ul class="list-unstyled">
-                <li><a href="">Nashville</a></li>
-                <li><a href="">Franklin</a></li>
-                <li><a href="">Atlanta</a></li>
-              </ul>
-            </li>
-            <li><a href="">We Specialize In</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact Us</a></li>
-          </ul>
-          <ul id="mobile-menu" class="main-menu-mobile list-unstyled collapse">
-            <li><a href="">Home</a></li>
-            <li class="active"><a href="">About</a></li>
-            <li><a href="">Locations</a></li>
-            <li><a href="">We Specialize In</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact Us</a></li>
-          </ul>
+          
+          <?php wp_nav_menu(array( 'menu' => 'main-menu', 'container' => false, 'menu_class' => 'list-unstyled main-menu clearfix hide-s hide-xs', 'depth' => 2)); ?>
+          <?php wp_nav_menu(array( 'menu' => 'main-menu', 'container' => false, 'menu_id' => 'mobile-menu', 'menu_class' => 'main-menu-mobile list-unstyled collapse', 'depth' => 1)); ?>
+          
           <?php if(ot_get_option('phone_number')): ?>
           <div class="call clearfix hide-xs">
             <span class="phone-icon"><i class="fa fa-phone"></i></span>

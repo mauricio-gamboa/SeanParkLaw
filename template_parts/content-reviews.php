@@ -31,12 +31,9 @@
             </div>
           </div>
           <?php endif; ?>
-
-          <div class="badges clearfix">
-            <div class="my-badge"><img src="<?php bloginfo('template_directory'); ?>/public/images/badge-1.png" alt=""/></div>
-            <div class="my-badge"><img src="<?php bloginfo('template_directory'); ?>/public/images/badge-2.png" alt=""/></div>
-            <div class="my-badge"><img src="<?php bloginfo('template_directory'); ?>/public/images/badge-3.png" alt=""/></div>
-          </div>
+          
+          <?php get_template_part('template_parts/content', 'badges'); ?>
+          
           <div class="facebook-plugin">
             <img src="<?php bloginfo('template_directory'); ?>/public/images/facebook-like.jpg" alt=""/>
           </div>
