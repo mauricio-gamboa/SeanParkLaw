@@ -131,7 +131,12 @@ body {
   font-family: 'proxima_nova_regular';
   color: #555555;
 }
-a:hover {
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  outline: none;
+  color: white;
   text-decoration: none;
 }
 .logo {
@@ -1817,9 +1822,15 @@ About Page Styles
     font-size: 15px;
   }
 }
+@media (min-width: 768px) and (max-width: 992px), (max-width: 767px) {
+  #header-about .header-about .about-meta-data blockquote p br {
+    display: none;
+  }
+}
 #content #as-seen-on {
   border-top: 2px solid #f5f5f5;
   margin-top: 35px;
+  padding-bottom: 0;
 }
 .content-margin {
   margin-bottom: 20px;
