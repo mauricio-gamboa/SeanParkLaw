@@ -12,8 +12,8 @@
           <h1><?php echo ot_get_option('home_page_title'); ?></h1>
           <?php endif; ?>
           
-          <a href="#reviews-wrapper" offset="64" du-smooth-scroll class="my-btn btn-3 hide-xs">get help now <span><i class="fa fa-chevron-right"></i></span></a>
-          <a href="#contact-form" offset="70" du-smooth-scroll class="my-btn btn-3 show-xs">get help now <span><i class="fa fa-chevron-right"></i></span></a>
+          <span class="hide-xs"><a href="#reviews-wrapper" offset="73" du-smooth-scroll class="my-btn btn-3">get help now <span><i class="fa fa-chevron-right"></i></span></a></span>
+          <span class="show-xs"><a href="#contact-form" offset="90" du-smooth-scroll class="my-btn btn-3">get help now <span><i class="fa fa-chevron-right"></i></span></a></span>
           
           <?php if(ot_get_option('sean_s_image')): ?>
           <img class="lawyer-img" src="<?php echo ot_get_option('sean_s_image'); ?>" alt=""/>
@@ -23,7 +23,7 @@
     </div>
   </div>
   
-  <?php if(ot_get_option('home_page_quote') && ot_get_option('home_page_cite')): ?>
+  <?php if(ot_get_option('sean_s_quote') && ot_get_option('sean_s_cite')): ?>
   <div class="home-quote">
     <img src="<?php bloginfo('template_directory'); ?>/public/images/arrow-1.png" alt="" class="arrow"/>
 
@@ -31,10 +31,10 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <blockquote>
-            <p><?php echo ot_get_option('home_page_quote'); ?>”</p>
+            <p><?php echo ot_get_option('sean_s_quote'); ?>”</p>
           </blockquote>
           <div class="cite">
-            <p><?php echo ot_get_option('home_page_cite'); ?></p>
+            <p><?php echo ot_get_option('sean_s_cite'); ?></p>
           </div>
           <div class="divider"></div>
         </div>
