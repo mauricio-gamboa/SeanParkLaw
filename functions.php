@@ -26,3 +26,23 @@ function enqueue_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
+
+if (!function_exists('sean_park_law_setup')) :
+  function sean_park_law_setup() {
+    if ( function_exists('add_theme_support') ) {
+      add_theme_support('post-thumbnails');
+    }
+
+    register_nav_menu('main-menu',__( 'Main Menu' ));
+    register_nav_menu('footer-menu',__( 'Footer Menu' ));
+    register_nav_menu('bottom-menu',__( 'Bottom Menu' ));
+  }
+endif;
+
+add_action('init', 'sean_park_law_setup');
+
+function get_my_post_type($postType, $limit) {
+  global $post;
+  $brands = get_posts(array('post_type'=> $postType, 'posts_per_page' => $limit));
+  return $brands;
+}
