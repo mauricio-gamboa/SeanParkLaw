@@ -1189,14 +1189,18 @@ Badges Styles
 .my-form {
   text-align: left;
 }
+.my-form .comment-reply-title,
 .my-form p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
+  margin-bottom: 10px;
 }
+.my-form .comment-reply-title a,
 .my-form p a {
   color: #e61919;
 }
+.my-form .comment-reply-title a:hover,
 .my-form p a:hover {
   color: #b71616;
 }
@@ -2476,7 +2480,7 @@ Blog Detail Styles
 .comments .comment .my-link {
   font-size: 13px;
 }
-.comments .comment .reply {
+.comments .comment .comment {
   border-top: 1px solid #dfdfdf;
   margin-top: 22px;
   border-bottom: 0;
@@ -2484,7 +2488,7 @@ Blog Detail Styles
   padding-left: 98px;
 }
 @media (max-width: 767px) {
-  .comments .comment .reply {
+  .comments .comment .comment {
     padding-left: 0;
   }
 }

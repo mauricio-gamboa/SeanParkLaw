@@ -14,8 +14,7 @@
 
         <div class="hide-s hide-xs">
           <?php get_template_part('template_parts/content', 'related-posts'); ?>
-          <?php get_template_part('template_parts/content', 'comments'); ?>
-          <?php get_template_part('template_parts/content', 'comments-form'); ?>
+          <?php if ( comments_open() || get_comments_number() ) { comments_template(); } ?>
         </div>
       </div>
       
@@ -25,8 +24,7 @@
       
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 show-s show-xs">
         <?php get_template_part('template_parts/content', 'related-posts'); ?>
-        <?php get_template_part('template_parts/content', 'comments'); ?>
-        <?php get_template_part('template_parts/content', 'comments-form'); ?>
+        <?php if ( comments_open() || get_comments_number() ) { comments_template(); } ?>
       </div>
       
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
