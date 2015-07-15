@@ -1856,6 +1856,12 @@ About Page Styles
   padding: 25px 0;
   margin-bottom: 30px;
 }
+.content a {
+  color: #e61919;
+}
+.content a:hover {
+  color: #b71616;
+}
 .content p,
 .content li {
   font-size: 16px;
