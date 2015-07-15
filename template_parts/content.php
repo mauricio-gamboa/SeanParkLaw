@@ -1,5 +1,9 @@
 <article class="article clearfix">
+  <?php if ( has_post_thumbnail() ): ?>
+  <?php the_post_thumbnail( array(168, 168) ); ?>
+  <?php else: ?>
   <img src="<?php bloginfo('template_directory'); ?>/public/images/featured-img.png" alt=""/>
+  <?php endif; ?>
 
   <div>
     <?php the_title('<h3>', '</h3>'); ?>

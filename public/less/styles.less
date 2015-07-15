@@ -1361,6 +1361,20 @@ Badges Styles
 .my-form {
   text-align: left;
 
+  p {
+    font-family: @helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    
+    a {
+      color: @red-1;
+
+      &:hover {
+        color: @red-2;
+      }
+    }
+  }
+
   .form-group {
     margin-bottom: 10px;
 
@@ -1371,6 +1385,7 @@ Badges Styles
 
       span {
         font-weight: normal;
+        color: @red-1;
       }
     }
 
@@ -2103,12 +2118,10 @@ About Page Styles
     font-size: 28px;
   }
 
+  .featured-img,
   .date {
     margin-bottom: 20px;
-  }
-
-  .featured-img {
-    margin-bottom: 20px;
+    text-transform: uppercase;
 
     img {
       width: 100%;
@@ -2249,6 +2262,7 @@ About Page Styles
 
         > img {
           width: 69px;
+          height: 69px;
           margin-right: 10px;
           margin-bottom: 15px;
         }
@@ -2500,13 +2514,18 @@ Blog Styles
   > img {
     float: left;
     margin-right: 30px;
+    width: 168px;
+    height: 168px;
 
     @media @medium {
       margin-bottom: 60px;
+      width: 168px;
+      height: 168px;
     }
 
     @media @small {
       width: 104px;
+      height: 104px;
       margin-right: 20px;
       margin-bottom: 135px;
     }
@@ -2688,6 +2707,11 @@ Blog Detail Styles
       width: 100%;
     }
 
+    > div {
+      float: none;
+      width: auto;
+    }
+
     h3 {
       .font-1;
       margin-bottom: 12px;
@@ -2695,6 +2719,7 @@ Blog Detail Styles
 
     img {
       width: 69px;
+      height: 69px;
       margin-right: 12px;
       margin-bottom: 10px;
 

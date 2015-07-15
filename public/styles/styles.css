@@ -1189,6 +1189,17 @@ Badges Styles
 .my-form {
   text-align: left;
 }
+.my-form p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+.my-form p a {
+  color: #e61919;
+}
+.my-form p a:hover {
+  color: #b71616;
+}
 .my-form .form-group {
   margin-bottom: 10px;
 }
@@ -1199,6 +1210,7 @@ Badges Styles
 }
 .my-form .form-group label span {
   font-weight: normal;
+  color: #e61919;
 }
 .my-form .form-group .form-control {
   resize: none;
@@ -1898,13 +1910,13 @@ About Page Styles
   font-family: 'proxima_nova_regular';
   font-size: 28px;
 }
+.content .featured-img,
 .content .date {
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
-.content .featured-img {
-  margin-bottom: 20px;
-}
-.content .featured-img img {
+.content .featured-img img,
+.content .date img {
   width: 100%;
 }
 .sidebar {
@@ -2017,6 +2029,7 @@ About Page Styles
 }
 .sidebar .widget.most-viewed .article > img {
   width: 69px;
+  height: 69px;
   margin-right: 10px;
   margin-bottom: 15px;
 }
@@ -2231,15 +2244,20 @@ Blog Styles
 .article > img {
   float: left;
   margin-right: 30px;
+  width: 168px;
+  height: 168px;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .article > img {
     margin-bottom: 60px;
+    width: 168px;
+    height: 168px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .article > img {
     width: 104px;
+    height: 104px;
     margin-right: 20px;
     margin-bottom: 135px;
   }
@@ -2403,6 +2421,10 @@ Blog Detail Styles
     width: 100%;
   }
 }
+.related-posts .article > div {
+  float: none;
+  width: auto;
+}
 .related-posts .article h3 {
   font-size: 16px;
   line-height: 26px;
@@ -2410,6 +2432,7 @@ Blog Detail Styles
 }
 .related-posts .article img {
   width: 69px;
+  height: 69px;
   margin-right: 12px;
   margin-bottom: 10px;
 }
