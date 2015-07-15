@@ -2156,7 +2156,9 @@ About Page Styles
     }
 
     ul {
+      list-style: outside none none;
       margin: 0;
+      padding: 0;
 
       li {
         line-height: normal;
@@ -2207,8 +2209,16 @@ About Page Styles
       }
 
       .map-wrapper {
-        img {
-          width: 100%;;
+        .border(2px, white);
+        height: 200px;
+        
+        map, div[map] {
+          display:block; 
+          height: 100% !important;
+        }
+        
+        .fill {
+          height:100% !important;
         }
       }
     }
@@ -2346,6 +2356,11 @@ Location Styles
     color: white;
     margin: 0;
     padding: 42px 0;
+
+    @media @xs {
+      line-height: normal;
+      font-size: 30px;
+    }
   }
 }
 
@@ -2354,15 +2369,18 @@ Location Styles
     > div {
       > img {
         width: 170px;
+        height: 170px;
         margin-right: 30px;
 
         @media @small {
           width: 125px;
+          height: 125px;
           margin-right: 21px;
         }
 
         @media @xs {
           width: 125px;
+          height: 125px;
           margin: 0 auto;
         }
       }

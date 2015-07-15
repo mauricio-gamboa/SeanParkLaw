@@ -34,7 +34,8 @@ module.exports = function (grunt) {
           'bower_components/angular/angular.js',
           'bower_components/angular-scroll/angular-scroll.js',
           'bower_components/re-tree/re-tree.js',
-          'bower_components/ng-device-detector/ng-device-detector.js'
+          'bower_components/ng-device-detector/ng-device-detector.js',
+          'bower_components/ngmap/build/scripts/ng-map.js'
         ],
         dest: 'public/js/libs.js'
       }
