@@ -2020,6 +2020,10 @@ About Page Styles
   margin-right: 10px;
   margin-bottom: 15px;
 }
+.sidebar .widget.most-viewed .article > div {
+  float: none;
+  width: auto;
+}
 .sidebar .widget.most-viewed .article > div p {
   font-size: 14px;
   line-height: 20px;
@@ -2247,6 +2251,26 @@ Blog Styles
     display: block;
   }
 }
+.article > div {
+  float: left;
+  width: 552px;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .article > div {
+    width: 418px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .article > div {
+    width: 283px;
+  }
+}
+@media (max-width: 767px) {
+  .article > div {
+    float: none;
+    width: auto;
+  }
+}
 .article > div h3 {
   color: #303030;
   font-size: 21px;
@@ -2271,14 +2295,14 @@ Blog Styles
 .article > div > div {
   margin-top: 33px;
 }
-.article > div > div a {
+.article > div > div > a {
   float: left;
 }
-.article > div > div a + a {
+.article > div > div > a + a {
   color: #898989;
   float: right;
 }
-.article > div > div a + a:hover {
+.article > div > div > a + a:hover {
   color: #606575;
 }
 .my-pagination {
@@ -2287,52 +2311,54 @@ Blog Styles
   margin-top: 35px;
   padding-top: 35px;
 }
-.my-pagination .pagination {
-  margin: 0;
+.my-pagination:empty {
+  display: none;
 }
-.my-pagination .pagination li a {
+.my-pagination .navigation h2 {
+  display: none;
+}
+.my-pagination .navigation .nav-links {
+  text-align: center;
+}
+.my-pagination .navigation .nav-links .page-numbers {
   font-family: 'Lato-Regular';
   border-radius: 4px;
   color: #e61919;
   border: 1px solid #c8c8c8;
   line-height: 32px;
   padding: 0 15px;
-  display: block;
+  display: inline-block;
   margin: 0 5px;
   font-size: 17px;
 }
+.my-pagination .navigation .nav-links .page-numbers.current {
+  color: white;
+  background: url("../images/bg-pagination.png") repeat-x 0 0;
+}
+.my-pagination .navigation .nav-links .page-numbers.current:hover {
+  border: 1px solid #c8c8c8;
+}
+.my-pagination .navigation .nav-links .page-numbers.current i {
+  vertical-align: middle;
+}
+.my-pagination .navigation .nav-links .page-numbers.dots:hover {
+  background: white;
+  color: #e61919;
+  border: 1px solid #c8c8c8;
+}
 @media (min-width: 768px) and (max-width: 992px) {
-  .my-pagination .pagination li a {
+  .my-pagination .navigation .nav-links .page-numbers {
     padding: 0 12px;
   }
 }
 @media (max-width: 767px) {
-  .my-pagination .pagination li a {
+  .my-pagination .navigation .nav-links .page-numbers {
     padding: 0 5px;
   }
 }
-.my-pagination .pagination li a:hover {
+.my-pagination .navigation .nav-links .page-numbers:hover {
   color: white;
   background: url("../images/bg-pagination.png") repeat-x 0 0;
-}
-.my-pagination .pagination li.active a {
-  color: white;
-  background: url("../images/bg-pagination.png") repeat-x 0 0;
-}
-.my-pagination .pagination li.active a:hover {
-  border: 1px solid #c8c8c8;
-}
-.my-pagination .pagination li.active a i {
-  vertical-align: middle;
-}
-.my-pagination .pagination li.ell a {
-  margin: 0;
-  padding: 0 5px;
-  border: 1px solid transparent;
-}
-.my-pagination .pagination li.ell a:hover {
-  background: none;
-  color: #e61919;
 }
 /***************************
 ****************************

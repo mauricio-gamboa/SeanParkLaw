@@ -2254,6 +2254,8 @@ About Page Styles
         }
 
         > div {
+          float: none;
+          width: auto;
           p {
             font-size: 14px;
             line-height: 20px;
@@ -2517,6 +2519,22 @@ Blog Styles
   }
 
   > div {
+    float: left;
+    width: 552px;
+
+    @media @medium {
+      width: 418px;
+    }
+
+    @media @small {
+      width: 283px;
+    }
+
+    @media @xs {
+      float: none;
+      width: auto;
+    }
+    
     h3 {
       color: @gray-8;
       font-size: 21px;
@@ -2540,7 +2558,7 @@ Blog Styles
     > div {
       margin-top: 33px;
 
-      a {
+      > a {
         float: left;
 
         & + a {
@@ -2562,20 +2580,49 @@ Blog Styles
   margin-top: 35px;
   padding-top: 35px;
 
-  .pagination {
-    margin: 0;
+  &:empty {
+    display: none;
+  }
 
-    li {
-      a {
+  .navigation {
+    h2 {
+      display: none;
+    }
+
+    .nav-links {
+      text-align: center;
+      
+      .page-numbers {
         font-family: 'Lato-Regular';
         border-radius: 4px;
         color: @red-1;
         .border(1px, @gray-19);
         line-height: 32px;
         padding: 0 15px;
-        display: block;
+        display: inline-block;
         margin: 0 5px;
         font-size: 17px;
+
+        &.current {
+          color: white;
+          background: url("../images/bg-pagination.png") repeat-x 0 0;
+
+          &:hover {
+            .border(1px, @gray-19);
+          }
+
+          i {
+            vertical-align: middle;
+          }
+        }
+
+        &.dots {
+          &:hover {
+            background: white;
+            color: @red-1;
+            .border(1px, @gray-19);
+          }
+        }
 
         @media @small {
           padding: 0 12px;
@@ -2588,34 +2635,6 @@ Blog Styles
         &:hover {
           color: white;
           background: url("../images/bg-pagination.png") repeat-x 0 0;
-        }
-      }
-
-      &.active {
-        a {
-          color: white;
-          background: url("../images/bg-pagination.png") repeat-x 0 0;
-
-          &:hover {
-            .border(1px, @gray-19);
-          }
-
-          i {
-            vertical-align: middle;
-          }
-        }
-      }
-
-      &.ell {
-        a {
-          margin: 0;
-          padding: 0 5px;
-          .border(1px, transparent);
-
-          &:hover {
-            background: none;
-            color: @red-1;
-          }
         }
       }
     }
