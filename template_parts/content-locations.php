@@ -9,7 +9,7 @@
       <?php foreach ( $locations as $key=>$post ) : setup_postdata( $post ); ?>
       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
         <div class="location clearfix">
-          <div><?php the_post_thumbnail( array(138, 138) ); ?></div>
+          <div><?php the_post_thumbnail( array(170, 170) ); ?></div>
           <div>
             <?php the_title('<h4>', '</h4>'); ?>
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('sean_park_law', ['duScroll', 'ng.deviceDetector']);
+var myApp = angular.module('sean_park_law', ['ngMap','duScroll', 'ng.deviceDetector']);
 
 myApp.directive('scrollTop', ['$document', function ($document) {
   return {
