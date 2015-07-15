@@ -2,16 +2,6 @@
 
 var myApp = angular.module('sean_park_law', ['ngMap','duScroll', 'ng.deviceDetector']);
 
-myApp.directive('scrollTop', ['$document', function ($document) {
-  return {
-    restrict: 'A',
-
-    link: function () {
-      $($document).scrollTop(0);
-    }
-  };
-}]);
-
 myApp.directive('owlAso', [function () {
   return {
     restrict: 'A',
@@ -49,28 +39,23 @@ myApp.directive('changeMenu', ['deviceDetector', '$window', '$document', functio
       var $html = $('html');
       var $use = ((deviceDetector.browser == 'firefox' || deviceDetector.browser == 'ie') ? $html : bodyElement);
 
+      var marginTop = element.css('margin-top').replace('px', '') * 1;
+      var marginBottom = element.css('margin-bottom').replace('px', '') * 1;
+      var height = (element.outerHeight() - element.outerHeight()) + marginBottom + marginTop;
+
+      if ($use.scrollTop() > (height))
+        element.addClass('white');
+      else
+        element.removeClass('white');
+
       windowElement.on('scroll', function () {
         if ($use) {
-          var marginTop = element.css('margin-top').replace('px', '') * 1;
-          var marginBottom = element.css('margin-bottom').replace('px', '') * 1;
-          var height = (element.outerHeight() - element.outerHeight()) + marginBottom + marginTop;
-
           if ($use.scrollTop() > (height))
             element.addClass('white');
           else
             element.removeClass('white');
         }
       });
-    }
-  };
-}]);
-
-myApp.directive('textSmall', [function () {
-  return {
-    restrict: 'A',
-
-    link: function (scope, element) {
-      element.text(element.text().substring(0, 63) + '...');
     }
   };
 }]);

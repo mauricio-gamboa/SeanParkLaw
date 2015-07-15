@@ -1,4 +1,4 @@
-<div class="comments-wrapper detail-section">
+<div id="comments"  class="comments-wrapper detail-section">
   <h4><span><i class="fa fa-comments"></i></span> Comments</h4>
 
   <div class="comments">

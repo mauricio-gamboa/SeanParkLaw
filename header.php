@@ -8,7 +8,7 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> scroll-top>
+<body <?php body_class(); ?>>
 <nav id="main-menu" change-menu>
   <div class="container">
     <div class="row">
