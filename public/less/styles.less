@@ -2679,7 +2679,7 @@ Blog Detail Styles
 .detail-section {
   margin-top: 40px;
 
-  > h4 {
+  h4 {
     font-size: 19px;
     color: @blue-6;
     text-transform: uppercase;
@@ -2698,23 +2698,12 @@ Blog Detail Styles
 
 .related-posts {
   .article {
-    float: left;
-    width: 50%;
     border-bottom: none;
     margin: 0;
     padding: 0;
 
     &:first-child {
       padding-right: 30px;
-
-      @media @xs {
-        padding-right: 0;
-      }
-    }
-
-    @media @xs {
-      float: none;
-      width: 100%;
     }
 
     > div {
