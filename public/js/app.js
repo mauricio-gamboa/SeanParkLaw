@@ -59,3 +59,17 @@ myApp.directive('changeMenu', ['deviceDetector', '$window', '$document', functio
     }
   };
 }]);
+
+myApp.directive('addIcon', [function () {
+  return {
+    restrict: 'A',
+
+    link: function (scope, element) {
+      var archive = element.hasClass('widget_archive');
+      var tags = element.hasClass('widget_wpctc_widget');
+      var title = element.find('.widget-title');
+      if (archive) title.prepend('<span><i class="fa fa-archive"></i></span>');
+      if (tags) title.prepend('<span><i class="fa fa-tag"></i></span>');
+    }
+  };
+}]);

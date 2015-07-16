@@ -2051,13 +2051,13 @@ About Page Styles
 .sidebar .widget.most-viewed .article > div > div .link-1 {
   font-size: 14px;
 }
-.sidebar .widget.archive ul {
+.sidebar .widget.widget_archive ul {
   margin: 0 -30px;
 }
-.sidebar .widget.archive ul li {
+.sidebar .widget.widget_archive ul li {
   margin: 0;
 }
-.sidebar .widget.archive ul li a {
+.sidebar .widget.widget_archive ul li a {
   font-family: 'proxima_nova_bold';
   color: #2e2e2e;
   font-size: 14px;
@@ -2066,13 +2066,13 @@ About Page Styles
   padding: 0 30px;
   position: relative;
 }
-.sidebar .widget.archive ul li a i {
+.sidebar .widget.widget_archive ul li a i {
   position: absolute;
   right: 30px;
   top: 50%;
   margin-top: -7px;
 }
-.sidebar .widget.archive ul li a:hover {
+.sidebar .widget.widget_archive ul li a:hover {
   color: white;
   background: url("../images/bg-archive.png") repeat-x 0 0;
 }
@@ -2124,6 +2124,12 @@ Location Styles
     line-height: normal;
     font-size: 30px;
   }
+}
+.office-meta-data a {
+  color: white;
+}
+.office-meta-data a:hover {
+  color: white;
 }
 .office-meta-data .location > div > img {
   width: 170px;
