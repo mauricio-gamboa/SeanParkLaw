@@ -1361,6 +1361,22 @@ Badges Styles
 .my-form {
   text-align: left;
 
+  .comment-reply-title,
+  p {
+    font-family: @helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    
+    a {
+      color: @red-1;
+
+      &:hover {
+        color: @red-2;
+      }
+    }
+  }
+
   .form-group {
     margin-bottom: 10px;
 
@@ -1371,6 +1387,7 @@ Badges Styles
 
       span {
         font-weight: normal;
+        color: @red-1;
       }
     }
 
@@ -2103,12 +2120,10 @@ About Page Styles
     font-size: 28px;
   }
 
+  .featured-img,
   .date {
     margin-bottom: 20px;
-  }
-
-  .featured-img {
-    margin-bottom: 20px;
+    text-transform: uppercase;
 
     img {
       width: 100%;
@@ -2249,6 +2264,7 @@ About Page Styles
 
         > img {
           width: 69px;
+          height: 69px;
           margin-right: 10px;
           margin-bottom: 15px;
         }
@@ -2272,7 +2288,7 @@ About Page Styles
       }
     }
 
-    &.archive {
+    &.widget_archive {
       ul {
         margin: 0 -30px;
 
@@ -2375,6 +2391,14 @@ Location Styles
 }
 
 .office-meta-data {
+  a {
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+  
   .location {
     > div {
       > img {
@@ -2500,13 +2524,18 @@ Blog Styles
   > img {
     float: left;
     margin-right: 30px;
+    width: 168px;
+    height: 168px;
 
     @media @medium {
       margin-bottom: 60px;
+      width: 168px;
+      height: 168px;
     }
 
     @media @small {
       width: 104px;
+      height: 104px;
       margin-right: 20px;
       margin-bottom: 135px;
     }
@@ -2650,7 +2679,7 @@ Blog Detail Styles
 .detail-section {
   margin-top: 40px;
 
-  > h4 {
+  h4 {
     font-size: 19px;
     color: @blue-6;
     text-transform: uppercase;
@@ -2669,23 +2698,17 @@ Blog Detail Styles
 
 .related-posts {
   .article {
-    float: left;
-    width: 50%;
     border-bottom: none;
     margin: 0;
     padding: 0;
 
     &:first-child {
       padding-right: 30px;
-
-      @media @xs {
-        padding-right: 0;
-      }
     }
 
-    @media @xs {
+    > div {
       float: none;
-      width: 100%;
+      width: auto;
     }
 
     h3 {
@@ -2695,6 +2718,7 @@ Blog Detail Styles
 
     img {
       width: 69px;
+      height: 69px;
       margin-right: 12px;
       margin-bottom: 10px;
 
@@ -2747,7 +2771,7 @@ Blog Detail Styles
       font-size: 13px;
     }
 
-    .reply {
+    .comment {
       .border-top(1px, @gray-17);
       margin-top: 22px;
       border-bottom: 0;

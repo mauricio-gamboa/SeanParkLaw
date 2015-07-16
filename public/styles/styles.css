@@ -1189,6 +1189,21 @@ Badges Styles
 .my-form {
   text-align: left;
 }
+.my-form .comment-reply-title,
+.my-form p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.my-form .comment-reply-title a,
+.my-form p a {
+  color: #e61919;
+}
+.my-form .comment-reply-title a:hover,
+.my-form p a:hover {
+  color: #b71616;
+}
 .my-form .form-group {
   margin-bottom: 10px;
 }
@@ -1199,6 +1214,7 @@ Badges Styles
 }
 .my-form .form-group label span {
   font-weight: normal;
+  color: #e61919;
 }
 .my-form .form-group .form-control {
   resize: none;
@@ -1898,13 +1914,13 @@ About Page Styles
   font-family: 'proxima_nova_regular';
   font-size: 28px;
 }
+.content .featured-img,
 .content .date {
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
-.content .featured-img {
-  margin-bottom: 20px;
-}
-.content .featured-img img {
+.content .featured-img img,
+.content .date img {
   width: 100%;
 }
 .sidebar {
@@ -2017,6 +2033,7 @@ About Page Styles
 }
 .sidebar .widget.most-viewed .article > img {
   width: 69px;
+  height: 69px;
   margin-right: 10px;
   margin-bottom: 15px;
 }
@@ -2034,13 +2051,13 @@ About Page Styles
 .sidebar .widget.most-viewed .article > div > div .link-1 {
   font-size: 14px;
 }
-.sidebar .widget.archive ul {
+.sidebar .widget.widget_archive ul {
   margin: 0 -30px;
 }
-.sidebar .widget.archive ul li {
+.sidebar .widget.widget_archive ul li {
   margin: 0;
 }
-.sidebar .widget.archive ul li a {
+.sidebar .widget.widget_archive ul li a {
   font-family: 'proxima_nova_bold';
   color: #2e2e2e;
   font-size: 14px;
@@ -2049,13 +2066,13 @@ About Page Styles
   padding: 0 30px;
   position: relative;
 }
-.sidebar .widget.archive ul li a i {
+.sidebar .widget.widget_archive ul li a i {
   position: absolute;
   right: 30px;
   top: 50%;
   margin-top: -7px;
 }
-.sidebar .widget.archive ul li a:hover {
+.sidebar .widget.widget_archive ul li a:hover {
   color: white;
   background: url("../images/bg-archive.png") repeat-x 0 0;
 }
@@ -2107,6 +2124,12 @@ Location Styles
     line-height: normal;
     font-size: 30px;
   }
+}
+.office-meta-data a {
+  color: white;
+}
+.office-meta-data a:hover {
+  color: white;
 }
 .office-meta-data .location > div > img {
   width: 170px;
@@ -2231,15 +2254,20 @@ Blog Styles
 .article > img {
   float: left;
   margin-right: 30px;
+  width: 168px;
+  height: 168px;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .article > img {
     margin-bottom: 60px;
+    width: 168px;
+    height: 168px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .article > img {
     width: 104px;
+    height: 104px;
     margin-right: 20px;
     margin-bottom: 135px;
   }
@@ -2368,7 +2396,7 @@ Blog Detail Styles
 .detail-section {
   margin-top: 40px;
 }
-.detail-section > h4 {
+.detail-section h4 {
   font-size: 19px;
   color: #243c95;
   text-transform: uppercase;
@@ -2377,14 +2405,12 @@ Blog Detail Styles
   border-bottom: 1px solid #dfdfdf;
   margin-bottom: 30px;
 }
-.detail-section > h4 span {
+.detail-section h4 span {
   color: #e61919;
   font-size: 24px;
   margin-right: 13px;
 }
 .related-posts .article {
-  float: left;
-  width: 50%;
   border-bottom: none;
   margin: 0;
   padding: 0;
@@ -2392,16 +2418,9 @@ Blog Detail Styles
 .related-posts .article:first-child {
   padding-right: 30px;
 }
-@media (max-width: 767px) {
-  .related-posts .article:first-child {
-    padding-right: 0;
-  }
-}
-@media (max-width: 767px) {
-  .related-posts .article {
-    float: none;
-    width: 100%;
-  }
+.related-posts .article > div {
+  float: none;
+  width: auto;
 }
 .related-posts .article h3 {
   font-size: 16px;
@@ -2410,6 +2429,7 @@ Blog Detail Styles
 }
 .related-posts .article img {
   width: 69px;
+  height: 69px;
   margin-right: 12px;
   margin-bottom: 10px;
 }
@@ -2453,7 +2473,7 @@ Blog Detail Styles
 .comments .comment .my-link {
   font-size: 13px;
 }
-.comments .comment .reply {
+.comments .comment .comment {
   border-top: 1px solid #dfdfdf;
   margin-top: 22px;
   border-bottom: 0;
@@ -2461,7 +2481,7 @@ Blog Detail Styles
   padding-left: 98px;
 }
 @media (max-width: 767px) {
-  .comments .comment .reply {
+  .comments .comment .comment {
     padding-left: 0;
   }
 }
