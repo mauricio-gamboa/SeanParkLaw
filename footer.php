@@ -6,7 +6,11 @@
           <h1 class="logo color"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
           <div class="footer-menus clearfix">
-            <?php wp_nav_menu(array( 'menu' => 'footer-menu', 'container' => false, 'menu_class' => 'list-unstyled', 'depth' => 2)); ?>
+            <ul class="list-unstyled">
+              <?php wp_nav_menu(array( 'menu' => 'footer-menu', 'container' => false, 'items_wrap' => '%3$s', 'depth' => 2)); ?>
+              <li class="hide-xs"><a href="#reviews-wrapper" offset="73" du-smooth-scroll>Contact</a></li>
+              <li class="show-xs"><a href="#contact-form" offset="90" du-smooth-scroll>Contact</a></li>
+            </ul>
           </div>
           
           <div class="footer-info hide-s hide-xs">

@@ -34,9 +34,7 @@
           
           <?php get_template_part('template_parts/content', 'badges'); ?>
           
-          <div class="facebook-plugin">
-            <img src="<?php bloginfo('template_directory'); ?>/public/images/facebook-like.jpg" alt=""/>
-          </div>
+          <?php get_template_part('template_parts/content', 'facebook'); ?>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
           <?php get_template_part('template_parts/content', 'form'); ?>
