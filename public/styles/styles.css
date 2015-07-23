@@ -1123,10 +1123,9 @@ Badges Styles
   vertical-align: middle;
 }
 .facebook-plugin {
-  margin-top: 15px;
-}
-.facebook-plugin img {
-  width: 100%;
+  overflow: hidden;
+  margin: 15px 0;
+  text-align: center;
 }
 /***************************
 ****************************
@@ -1536,7 +1535,8 @@ Footer Styles
   font-size: 21px;
 }
 .footer-bottom {
-  line-height: 40px;
+  padding: 10px 0;
+  line-height: 34px;
   color: #858a9a;
 }
 @media (max-width: 767px) {
