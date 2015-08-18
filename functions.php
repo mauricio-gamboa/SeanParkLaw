@@ -67,8 +67,28 @@ add_action( 'widgets_init', 'sean_park_law_widgets_init' );
 
 function get_my_post_type($postType, $limit) {
   global $post;
-  $brands = get_posts(array('post_type'=> $postType, 'posts_per_page' => $limit));
-  return $brands;
+  $my_posts = get_posts(array('post_type'=> $postType, 'posts_per_page' => $limit));
+  return $my_posts;
+}
+
+function has_children() {
+  global $post;
+  $pages = get_pages(array( 'child_of' => $post->ID, 'post_type' => get_post_type(), 'sort_order' => 'desc' ));
+  return count($pages);
+}
+
+function top_level_id() {
+  global $post;
+  $parent = array_reverse(get_post_ancestors($post->ID));
+  $first_parent = get_post($parent[0]);
+  return $first_parent->ID;
+}
+
+function get_my_post_parents() {
+  global $post;
+  $parents = get_post_ancestors( $post->ID );
+  $id = ($parents) ? $parents[count($parents)-1]: $post->ID;
+  return $id;
 }
 
 function mytheme_comment($comment, $args, $depth) {
