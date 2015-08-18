@@ -4,7 +4,11 @@
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="header-general">
-          <?php the_title('<h1>', '&nbsp;office</h1>');?> 
+          <?php if (has_children() && top_level_id() == get_the_id()): ?>
+            <?php the_title('<h1>', '&nbsp;Office</h1>');?> 
+          <?php else: ?>
+            <?php the_title('<h1>', '</h1>');?> 
+          <?php endif; ?>
         </div>
       </div>
     </div>
